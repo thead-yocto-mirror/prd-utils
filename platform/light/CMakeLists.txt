@@ -1,0 +1,20 @@
+#
+# Copyright (C) 2023 Alibaba Group Holding Limited
+#
+
+# include
+INCLUDE_DIRECTORIES(./)
+
+SET(LIBSOURCE
+	prd_utils_kv_light.c
+	uboot_env_params.c
+)
+
+ADD_LIBRARY(prd_utils SHARED ${LIBSOURCE})
+
+INSTALL(DIRECTORY ./include/. DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+INSTALL(TARGETS prd_utils
+        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
+
