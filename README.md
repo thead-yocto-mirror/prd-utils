@@ -1,37 +1,20 @@
-# prd-utils
+# Comments
+This is utilities for product produce process, including:
+- utils for set/get/clean Key-Value
 
-#### 介绍
-product produce utilities
+# How to get the code
+- git clone git@gitlab.alibaba-inc.com:thead-linux/prd_utils.git
 
-#### 软件架构
-软件架构说明
+# How to build
+1. export PATH=riscv-toolchain-2.2.8/bin:$PATH
+2. mkdir build
+3. cd buildout
+4. cmake ../ -DBOARD_NAME="light" -DCMAKE_INSTALL_BINDIR=bin -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_INSTALL_INCLUDEDIR=include -DCMAKE_C_COMPILER=gcc
+5. make
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+# Description of each directories
+- cmake/: The cmake files for build.
+- include/: The header files.
+- platform/: Different platform implementation code directories.
+- test/: The test cases.
+- utils/: The utils using in console.

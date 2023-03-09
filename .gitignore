@@ -1,0 +1,9 @@
+!.gitignore
+*.o
+out_*
+buildout
+build
+output
+install.sh
+make.sh
+
